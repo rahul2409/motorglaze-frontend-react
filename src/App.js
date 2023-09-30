@@ -1,24 +1,31 @@
-import React from 'react';
-import Navbar from './components/navbar';
-import Sidebar from './components/sidebar';
-import Dashboard from './components/Dashboard';
+// app.js
+import React,{ useState } from "react";
+import { BrowserRouter as Router} from "react-router-dom";
+// import Users from "./components/shopOwner/users.js";
+import Taskbar from "./components/shopOwner/Taskbar.js";
+import Login from "./components/login.js";
 
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
- 
-function App(){
- 
-        return (
-            <div>
-                <Navbar/>
-                <div class="container-fluid" id="main">
-                 <div class="row row-offcanvas row-offcanvas-left">
-                   <Sidebar/>
-                  <Dashboard/>
-                
-             </div>
-            </div>  
-        </div>  
-        );
-    }
-  
-export default App
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  return (
+    <Router>
+      <div>     
+        {/* {isLoggedIn ? ( */}
+          <div>
+            <Taskbar />
+            {/* <Users /> */}
+          </div>
+        {/* ) : (
+          <Login handleLogin={handleLogin} />
+        )} */}
+      </div>
+    </Router>
+  );
+};
+
+export default App;
