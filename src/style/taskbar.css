@@ -1,34 +1,44 @@
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 15%;
-    flex-grow: 0;
-  }
-
-  .nav-link{
-    font-size: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0%;
-    color: white;
-  }
-
-  .nav-link > svg{
-    flex: 30%;
-    display: grid;
-    place-items: center;
-  }
-  .nav-link > span{
-    flex: 70%;
-  }
-
-  .nav-link:hover{
-    color: white;
-  }
-
-  
-  
+.sidebar{
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+.top-section{
+  display: flex;
+  align-items:center;
+  padding:20px 15px;
+}
+.logo{
+  font-size: 20px;
+}
+.bars{
+  display: flex;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.bars{
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link{
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover{
+  background:lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active{
+  background: lightskyblue;
+  color: #000;
+}
+.icon, .link_text{
+  font-size: 20px;
+}

@@ -1,20 +1,19 @@
-import { faHome, faIdCard, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import {FaHome, FaUsers, FaIdCard} from "react-icons/fa"
 export const TaskbarActionsData = [
     {
-        title:"Home",
-        icon: <FontAwesomeIcon icon={faHome} />,
-        linkTo: "/"
+        path:"/",
+        name:"Home",
+        icon:<FaHome/>
     },
     {
-        title: "Customers",
-        icon: <FontAwesomeIcon icon={faUsers} />,
-        linkTo: "/customers"
+        path:"/customers",
+        name:"Customer",
+        icon:<FaUsers/>
     },
     {
-        title: "Memberships",
-        icon: <FontAwesomeIcon icon={faIdCard} />,
-        linkTo: "/memberships"
+        path:"/memberships",
+        name:"Membership",
+        icon:<FaIdCard/>
     }
 ];
